@@ -25,12 +25,14 @@
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 <style>
-	@media only screen and (min-width: 768px ) {
-		.img_class{position:absolute;top:-37px;width: 130px;}
-	}
-	@media only screen and (max-width: 767px) {
-		.img_class{position:absolute;top:-37px;width: 90px;}
-	}
+    @media only screen and (min-width: 768px ) {
+        .img_class{position:absolute;top:-37px;width: 130px;}
+        .img_weather{position:absolute;height: 50px;left: 92%;top: 40px;z-index: 10;cursor: pointer;display: block;}
+    }
+    @media only screen and (max-width: 767px) {
+        .img_class{position:absolute;top:-37px;width: 90px;}
+        .img_weather{position:absolute;height: 50px;left: 92%;top: 40px;z-index: 10;cursor: pointer;display: none;}
+    }
 </style>
 <script>
 	function showWeather(){
@@ -38,7 +40,7 @@
 	}
 </script>
 <body class="homepage">
-	<img onclick="showWeather()" style="position:absolute;height: 50px;left: 92%;top: 40px;z-index: 10;cursor: pointer;" title="查看天气"  src="images/sun.png" />
+<img class="img_weather" onclick="showWeather()" title="查看天气"  src="images/sun.png" />
     <header id="header">
         <div class="top-bar">
             <div class="container">
